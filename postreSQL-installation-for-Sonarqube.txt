@@ -1,0 +1,42 @@
+#src: https://www.hostinger.in/tutorials/how-to-install-postgresql-on-centos-7/
+#POSTGRE FOR SONARQUBE
+#Step 1: Install PostgreSQL 10 repo.
+
+
+
+sudo yum install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm -y
+#Step 2: Install PostgreSQL 10 server:
+sudo yum install -y postgresql15-server    #(Change no to latest version)
+#Step 3: Initialize the database.
+sudo /usr/pgsql-15/bin/postgresql-15-setup initdb
+#Step 4: Open /var/lib/pgsql/data/pg_hba.conf file to change the authentication to md5.
+sudo vi /var/lib/pgsql/15/data/pg_hba.conf
+#optional: Find the following lines at the bottom of the file and change 
+#peer to trust and idnet to md5
+#Step 5: Start and enable PostgreSQL.
+sudo systemctl start postgresql-15
+sudo systemctl enable postgresql-15
+#Step 6: You can verify the installation using the following version select query.
+sudo -u postgres /usr/pgsql-15/bin/psql -c "SELECT version();"
+
+sudo echo "postgres:admin123" | chpasswd
+runuser -l postgres -c "createuser sonar"
+sudo -i -u postgres psql -c "ALTER USER sonar WITH ENCRYPTED PASSWORD 'admin123';"
+sudo -i -u postgres psql -c "CREATE DATABASE sonarqube OWNER sonar;"
+sudo -i -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;"
+systemctl restart  postgresql-15
+
+#OR
+
+##How to Install PostgreSQL on CentOS 7 Using the CentOS Repositories
+
+#Install PostgreSQL on CentOS 7
+sudo yum install postgresql-server
+#Initialize the Database
+sudo postgresql-setup initdb
+#Start the Database
+sudo systemctl start postgresql.service
+#Enable PostgreSQL
+sudo systemctl enable postgresql.service
+
+
