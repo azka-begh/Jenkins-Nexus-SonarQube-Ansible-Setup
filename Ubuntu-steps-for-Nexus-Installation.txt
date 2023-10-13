@@ -1,5 +1,6 @@
 sudo apt-get update
 sudo apt install openjdk-8-jre-headless -y
+#sudo apt install default-jdk
 cd /opt
 sudo wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
 tar -zxvf latest-unix.tar.gz
