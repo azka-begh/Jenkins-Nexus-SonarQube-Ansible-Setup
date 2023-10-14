@@ -3,6 +3,8 @@
 #JDK installation
 sudo apt update
 sudo apt install fontconfig openjdk-17-jre
+# or
+sudo apt-get install openjdk-11-jdk
 java -version
 
 # Jenkins installation on ubuntu
