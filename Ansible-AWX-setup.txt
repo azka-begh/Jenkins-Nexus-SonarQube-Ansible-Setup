@@ -1,0 +1,14 @@
+use centos8
+Use this with few modifications mentioned.
+https://www.techsupportpk.com/2020/03/how-to-install-ansible-awx-centos-rhel-7-8.html
+
+Install packages separately
+pip needs to be upgarded
+pip3 ---command to upgrade
+
+in role/local_docker/tasks/compose.yml
+replace the existing with this
+- name: Run migrations in task container
+      shell: docker compose run --rm --service-ports task awx-manage migrate --no-input
+
+docker-compose does not work on centos instead we can use docker compose.
