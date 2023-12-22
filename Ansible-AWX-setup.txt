@@ -84,3 +84,4 @@ open the ip address of your server
 References: https://medium.com/@kiena/virtualbox-installing-ansible-awx-using-docker-compose-ubuntu-22-04-4d5cfc0ad548
 https://www.joakimnordin.com/how-to-install-awx/
 
+Inventory/Project setup: http://vcloud-lab.com/entries/devops/ansible-awx-tower-github-inventory-integration-github-inventory-source
