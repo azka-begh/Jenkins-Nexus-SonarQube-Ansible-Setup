@@ -1,3 +1,4 @@
+------------------------------------------------------------------------
 use centos8
 Use this with few modifications mentioned.
 https://www.techsupportpk.com/2020/03/how-to-install-ansible-awx-centos-rhel-7-8.html
@@ -12,3 +13,74 @@ replace the existing with this
       shell: docker compose run --rm --service-ports task awx-manage migrate --no-input
 
 docker-compose does not work on centos instead we can use docker compose.
+
+--------------------------------------------------------------------------
+---Use the below yaml for ubuntu ---:
+Run it with ansible-playbook pre-install.yml
+---
+- name: Installing Ansible AWX
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Install several packages
+      apt:
+        name:
+          - npm
+          - nodejs
+          - git
+          - pwgen
+          - unzip
+          - python3-virtualenv
+          - python3-pip
+        state: present
+
+    - name: Add Docker GPG apt Key
+      apt_key:
+        url: "https://download.docker.com/linux/ubuntu/gpg"
+        state: present
+
+    - name: Add Docker Repository
+      apt_repository:
+        repo: "deb https://download.docker.com/linux/ubuntu jammy stable"
+        state: present
+
+    - name: Install docker-ce, docker-ce-cli, and docker-compose-plugin package
+      apt:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - docker-compose-plugin
+        state: present
+        update_cache: true
+
+    - name: Ensure docker service is started
+      service:
+        name: docker
+        state: started
+
+    - name: Add student user to the docker group
+      user:
+        name: student
+        groups: docker
+        append: yes
+
+    - name: Set permissions for Docker socket
+      file:
+        path: /var/run/docker.sock
+        mode: "0666"
+        owner: root
+        group: docker
+
+    - name: Install docker-compose via pip3
+      pip:
+        name: docker-compose
+        executable: pip3
+
+cd awx-17.1.0/installer/
+ansible-playbook -i inventory install.yml -e ansible_python_interpreter=/usr/bin/python3
+docker ps
+open the ip address of your server
+
+References: https://medium.com/@kiena/virtualbox-installing-ansible-awx-using-docker-compose-ubuntu-22-04-4d5cfc0ad548
+https://www.joakimnordin.com/how-to-install-awx/
+
