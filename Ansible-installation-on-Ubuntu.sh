@@ -10,3 +10,12 @@ mkdir -p ~/ansible/
 #When ansible is installed, then go to /etc/ansible/ and take a backup of ansible.cfg 
 #and run ansible-config init --disabled -t all > ansible.cfg
 #or simple create an ansible.config file in your working ansible directory where you disable host_key_checking
+
+
+--------------------------
+
+INSTALL ANSIBLE ON CentOS
+--------------------------
+
+sudo yum install epel-release
+sudo yum install ansible
