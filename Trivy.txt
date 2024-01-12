@@ -1,0 +1,19 @@
+sudo curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
+----------- Test only ------------------------------------
+wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/html.tpl
+trivy image --format template --template @./html.tpl -o report.html node:11-alpine
+
+After installing Trivy on jenkins server, do:
+-----------------------------------------------------------
+mkdir ~/trivy/
+trivy --cache-dir ~/trivy/ image --download-java-db-only
+trivy --cache-dir ~/trivy/ image --download-db-only
+-----------------------------------------------------------
+-----------------------------------------------------------
+**************If scans fails due to space issue, run:******************
+------------------------------------------------------------
+docker system prune -a -f
+trivy image --reset
+trivy image --clear-cache
+trivy --cache-dir . image --download-java-db-only
+trivy --cache-dir . image --download-db-only
