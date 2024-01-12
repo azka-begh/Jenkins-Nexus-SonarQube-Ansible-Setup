@@ -27,4 +27,4 @@ sudo systemctl enable nexus.service
 -----------------------------------------------
 docker exec -it nexus3 /bin/bash
 Retrieve the password for admin
-#docker container exec nexus cat nexus-data/admin.password
+cat /var/lib/docker/volumes/nexus-data/_data/admin.password
