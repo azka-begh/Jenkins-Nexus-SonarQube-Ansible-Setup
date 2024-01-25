@@ -1,0 +1,33 @@
+sudo apt update && sudo apt install unzip wget -y
+sudo apt install openjdk-8-jre-headless
+--------------------------------------------
+cd /opt/
+wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/6.17.4/jfrog-artifactory-oss-6.17.4.zip
+sudo unzip jfrog-artifactory-oss-6.17.4.zip
+sudo mv artifactory-oss-6.17.4 jfrog
+-------------------------------------------
+sudo adduser jfrog
+sudo echo "jfrog ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+sudo chown -R jfrog.jfrog /opt/jfrog/
+---------------------------------------
+sudo vim /etc/systemd/system/jfrog.service
+---------------------------------------
+[Unit]
+Description=jfrog service
+After=network.target
+
+[Service]
+Type=forking
+LimitNOFILE=65536
+ExecStart=/opt/jfrog/bin/artifactory.sh start
+ExecStop=/opt/jfrog/bin/artifactory.sh stop
+User=jfrog
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+----------------------------------------
+sudo systemctl start jfrog
+sudo systemctl enable jfrog
+sudo systemctl status jfrog
+-----------------------------------------
