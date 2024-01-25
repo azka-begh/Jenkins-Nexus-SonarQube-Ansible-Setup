@@ -2,6 +2,7 @@ sudo apt update && sudo apt install unzip wget -y
 sudo apt install openjdk-8-jre-headless
 --------------------------------------------
 cd /opt/
+# latest - https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/
 wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/6.17.4/jfrog-artifactory-oss-6.17.4.zip
 sudo unzip jfrog-artifactory-oss-6.17.4.zip
 sudo mv artifactory-oss-6.17.4 jfrog
