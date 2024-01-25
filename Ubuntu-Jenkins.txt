@@ -1,3 +1,4 @@
+When jenkins is set, go to manage jenkins -> nodes -> script -> Run "System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")" to enable css
 #!/bin/bash
 
 #JDK installation
