@@ -1,4 +1,5 @@
-sudo curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin v0.18.3
+
+sudo curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
 ----------- Test only ------------------------------------
 wget https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/html.tpl
 trivy image --format template --template @./html.tpl -o report.html node:11-alpine
