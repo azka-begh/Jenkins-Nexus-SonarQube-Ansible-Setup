@@ -3,10 +3,12 @@ sudo apt install openjdk-8-jre-headless
 --------------------------------------------
 cd /opt/
 # latest - https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/
-wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/6.17.4/jfrog-artifactory-oss-6.17.4.zip
-sudo unzip jfrog-artifactory-oss-6.17.4.zip
-sudo mv artifactory-oss-6.17.4 jfrog
+sudo wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/7.77.3/jfrog-artifactory-oss-7.77.3-linux.tar.gz
+sudo tar -xzvf *.tar.gz
+sudo mv artifactory* jfrog
 -------------------------------------------
+#sudo adduser --disabled-password --gecos "" jfrog
+
 sudo adduser jfrog
 sudo echo "jfrog ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo chown -R jfrog.jfrog /opt/jfrog/
