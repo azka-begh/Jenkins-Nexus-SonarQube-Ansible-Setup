@@ -1,7 +1,7 @@
+#!/bin/bash
 docker volume create --name sonar-data
---------------------------------------------------------------------------------------------------------------------
----------------------------------
-sudo vim /etc/systemd/system/sonarqube.service
+
+sudo cat <<EOT>> /etc/systemd/system/sonarqube.service
 
 [Unit]
 Description=sonarqube service
@@ -16,9 +16,8 @@ ExecStop=-/usr/bin/docker stop --time=0 sonarqube
 
 [Install]
 WantedBy=multi-user.target
+EOT
 
------------------------------------------
-------------------------------------------
 sudo systemctl daemon-reload
 sudo systemctl start sonarqube
 sudo systemctl enable sonarqube
