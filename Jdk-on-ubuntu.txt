@@ -1,8 +1,0 @@
-apt install openjdk-17-jdk openjdk-17-jre
-
-vim ~/.bashrc
-
-export JAVA_HOME=/usr/lib/jvm/jdk-17/
-export PATH=$PATH:$JAVA_HOME/bin  
-
-source ~/.bashrc
