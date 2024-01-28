@@ -3,7 +3,7 @@ sudo apt install openjdk-8-jre-headless -y
 #sudo apt install default-jdk
 cd /opt
 sudo wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
-tar -zxvf latest-unix.tar.gz
+star -zxvf latest-unix.tar.gz
 sudo mv /opt/nexus* /opt/nexus
 sudo adduser nexus
 sudo visudo #(Enter nexus ALL=(ALL) NOPASSWD: ALL)
