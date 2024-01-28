@@ -1,4 +1,4 @@
-https://octopus.com/blog/jenkins-docker-install-guide
+#https://octopus.com/blog/jenkins-docker-install-guide
 -------------------------------------------------------
 docker volume create --name nexus-data
 
