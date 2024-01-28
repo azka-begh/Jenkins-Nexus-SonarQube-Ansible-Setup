@@ -1,9 +1,8 @@
-#https://octopus.com/blog/jenkins-docker-install-guide
--------------------------------------------------------
+#!/bin/bash
+
 docker volume create --name nexus-data
 
---------------------------------------------------------
-vim /etc/systemd/system/nexus.service
+sudo cat <<EOT>> /etc/systemd/system/nexus.service
 
 [Unit]
 Description=nexus service
@@ -18,13 +17,13 @@ ExecStop=-/usr/bin/docker stop --time=0 nexus3
 
 [Install]
 WantedBy=multi-user.target
+EOT
 
-----------------------------------------------
 sudo systemctl daemon-reload
 sudo systemctl start nexus.service
 sudo systemctl enable nexus.service
 
------------------------------------------------
-docker exec -it nexus3 /bin/bash
-Retrieve the password for admin
-cat /var/lib/docker/volumes/nexus-data/_data/admin.password
+# Retrieve initial passwd
+# docker exec -it nexus3 /bin/bash
+# Retrieve the password for admin
+ #cat /var/lib/docker/volumes/nexus-data/_data/admin.password
