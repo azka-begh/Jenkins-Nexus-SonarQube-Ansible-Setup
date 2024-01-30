@@ -3,3 +3,8 @@ Enter subdomain as something --> abc.yourgodaddydomain
 Create public hosted zone
 
 Then copy 4 ns created in Route53 to godaddy->domain->manage->ns -> one by one enter all 4 with name/host as route 53 domain (abc here)
+
+Create an S3 Bucket
+create a server name--kops for example
+There install awscli, kops and kubectl
+Configure aws user with admin privilege (otherewise choose policies and create some of them for kubernetes cluster purpose)
