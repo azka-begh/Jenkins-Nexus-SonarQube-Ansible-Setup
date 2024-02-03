@@ -17,6 +17,6 @@ https://docs.ansible.com/ansible-tower/
 <https://bluexp.netapp.com/blog/cvo-blg-kubernetes-statefulset-a-practical-guide/>
 
 ## Volumes
-<https://bluexp.netapp.com/blog/cvo-blg-5-types-of-kubernetes-volumes-and-how-to-work-with-them/>
-<https://spacelift.io/blog/kubernetes-persistent-volumes/>
-<https://blog.devops.dev/volumes-in-kubernetes-8e042c6c400e/>
+<https://bluexp.netapp.com/blog/cvo-blg-5-types-of-kubernetes-volumes-and-how-to-work-with-them>
+<https://spacelift.io/blog/kubernetes-persistent-volumes>
+<https://blog.devops.dev/volumes-in-kubernetes-8e042c6c400e>
