@@ -43,6 +43,8 @@ kubectl api-resources -o wide
 # ADD CERT TO CONFIG FILE - Optional
 kubectl config set-credentials john --client-key john.key --client-certificate john.csr --embed-certs=true
 
+Get Users in K8s: kubectl config get-users
+
 7. Create Role and RoleBinding
 
 kubectl create role pod-manager --verb=create,list,get --resource=pods --namespace=default --dry-run=client -o yaml > pod-manager-role.yml
