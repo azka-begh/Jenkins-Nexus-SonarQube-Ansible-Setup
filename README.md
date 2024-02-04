@@ -7,16 +7,14 @@
 # Kubernetes:
 
 ## Ingress
-https://platform9.com/blog/building-a-complete-stack-ingress-controllers
-https://www.bmc.com/blogs/kubernetes-ingress
-https://medium.com/avmconsulting-blog/ingress-service-types-in-kubernetes-3e9b68b78307
+[1](https://platform9.com/blog/building-a-complete-stack-ingress-controllers), [2](https://www.bmc.com/blogs/kubernetes-ingress), [3](https://medium.com/avmconsulting-blog/ingress-service-types-in-kubernetes-3e9b68b78307)
 
 ## StatefulSets
-<https://spacelift.io/blog/statefulset-vs-deployment/>
-<https://www.youtube.com/watch?v=pPQKAR1pA9U/>
-<https://bluexp.netapp.com/blog/cvo-blg-kubernetes-statefulset-a-practical-guide/>
+[1](https://spacelift.io/blog/statefulset-vs-deployment), [2-youtube](https://www.youtube.com/watch?v=pPQKAR1pA9U), [3](https://bluexp.netapp.com/blog/cvo-blg-kubernetes-statefulset-a-practical-guide)
+
 
 ## Volumes
-<https://bluexp.netapp.com/blog/cvo-blg-5-types-of-kubernetes-volumes-and-how-to-work-with-them>
-<https://spacelift.io/blog/kubernetes-persistent-volumes>
-<https://blog.devops.dev/volumes-in-kubernetes-8e042c6c400e>
+[1](https://bluexp.netapp.com/blog/cvo-blg-5-types-of-kubernetes-volumes-and-how-to-work-with-them), [2](https://spacelift.io/blog/kubernetes-persistent-volumes), [3](https://blog.devops.dev/volumes-in-kubernetes-8e042c6c400e)
+
+## DaemonSets
+[1](https://devopscube.com/kubernetes-daemonset/), [2](https://spot.io/resources/kubernetes-autoscaling/kubernetes-daemonset-a-practical-guide/), [3](https://www.densify.com/kubernetes-autoscaling/kubernetes-taints/)
