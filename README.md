@@ -1,3 +1,5 @@
+Istio with Falgger - Canary
+https://docs.flagger.app/tutorials/istio-progressive-delivery
 # Minikube on mac m1/m2
 https://devopscube.com/minikube-mac/
 
