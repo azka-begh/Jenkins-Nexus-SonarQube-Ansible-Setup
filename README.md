@@ -2,6 +2,7 @@ Istio with Falgger - Canary
 https://docs.flagger.app/tutorials/istio-progressive-delivery
 
 https://istio.io/latest/docs/setup/getting-started/
+https://www.digitalocean.com/community/tutorials/how-to-do-canary-deployments-with-istio-and-kubernetes
 https://www.getambassador.io/blog/kubernetes-canary-testing-istio-release
 https://thenewstack.io/tutorial-blue-green-deployments-with-kubernetes-and-istio/
 # Minikube on mac m1/m2
