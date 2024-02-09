@@ -1,0 +1,9 @@
+- Tasked with taking care of Azure DevOps (SaaS as well as on-premises instances).
+- Automated Linux tasks using Bash scripts and classic ADO pipelines using PowerShell scripting (post-build and deploy scripts).
+- Worked on Jenkins CI/CD pipelines to create artifacts and push entries to System of Records in BitBucket and Azure Repositories.
+- Worked on Ansible CLI, Tower and then the upgraded Ansible Automation Platform to configure servers and automate deployments triggered from Jenkins/Azure DevOps. Supported Production Deployments.
+- Using Bash and Git, worked on connecting ADO on-prem to ADO SaaS to push entries (YAML) to Azure repo which in turn are picked up by Ansible for CD.
+- Wrote checksum scripts (.ps1) to validate artifacts pre and post deployments.
+- Managed Nexus repositories and uploaded artifacts (Maven and other vendors).
+- Did PoC work on how to migrate TFVC repositories to Git repositories.
+- Supported creating and pushing Docker images to Nexus and deployments to OpenShift clusters.
