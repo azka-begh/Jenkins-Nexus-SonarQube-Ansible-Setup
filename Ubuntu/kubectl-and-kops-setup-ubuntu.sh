@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # ssh-keygen --> This will be interactive, so this separately
 
@@ -31,7 +30,11 @@ kops validate cluster --state=s3://kops-s3-k8s-bucket
 # To get nodes in the cluster 
 export KOPS_STATE_STORE=s3://kops-s3-k8s-bucket
 kops get ig
+kops get cluster
 
+# ssh to a control-plane node:
+ssh -i ~/.ssh/id_rsa ubuntu@api.k8skops.aab12.xyz
+----------------------------------------------
 # edit your master and slave nodes
 kops edit ig <master-name>
 
