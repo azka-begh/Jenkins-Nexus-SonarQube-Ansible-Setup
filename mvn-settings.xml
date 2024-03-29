@@ -86,12 +86,12 @@
     <server>
        <id>nexus</id>
        <username>admin</username>
-       <password>Thelastofus12345</password>
+       <password></password>
   </server>
     <server>
           <id>jfrog</id>
           <username>admin</username>
-          <password>Thelastofus12345</password>
+          <password></password>
   </server>
   </servers>
 
